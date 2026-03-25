@@ -278,6 +278,40 @@ document.getElementById('signupForm').addEventListener('submit', async function(
         alert('Could not connect to the server.');
     }
 });
+// Example function to send data to your GBP Service
+async function sendDataToGBPService(formData) {
+    // 1. Point to your secure backend container route
+    const apiUrl = 'https://gbp-service.pdqdigital.services/your-api-endpoint'; 
+
+    try {
+        // 2. Make the connection
+        const response = await fetch(apiUrl, {
+            method: 'POST', // Use 'GET' if you are only requesting data, not sending
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify(formData) // Convert your JavaScript object to a JSON string
+        });
+
+        // 3. Check if the server rejected the request (e.g., 404 or 500 errors)
+        if (!response.ok) {
+            throw new Error(`Server Error: ${response.status}`);
+        }
+
+        // 4. Parse the successful JSON response from your Python backend
+        const data = await response.json();
+        console.log('Success! Backend says:', data);
+        
+        // TODO: Update your UI here (e.g., show a green success message, clear the form)
+        return data;
+
+    } catch (error) {
+        console.error('Connection failed:', error);
+        // TODO: Update your UI to show a red error message to the user
+    }
+}
+        
     </script>
 </body>
 </html>
