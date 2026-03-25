@@ -28,7 +28,7 @@
             <div class="flex items-center gap-4">
                 <a href="tel:7722022613" id="nav-phone-link" class="hidden lg:flex items-center gap-2 text-gray-700 hover:text-pdq-blue font-bold transition">
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-pdq-orange" viewBox="0 0 20 20" fill="currentColor">
-                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1>
+                      <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1-1v-2.153a1 1 0 01.164-.554l1.548-2.322a1 1 0 011.06-.419l2.322.58a1 1 0 01.836.986z" />
                     </svg>
                     <span class="inline-phone">(772) 202-2613</span>
                 </a>
@@ -64,7 +64,7 @@
                 "You don't need another 'SEO Agency' promising empty reports. You need a digital shield that keeps the 'Map Pack' open while you actually run your business."
             </h2>
             <p class="mt-6 text-lg text-gray-600">
-                You’ve tried updating your hours only to be flagged by a faceless AI. You've seen inferior competitors stay at the top while you remain "Pending." **pdqdigital.services** was built to stop the>
+                You’ve tried updating your hours only to be flagged by a faceless AI. You've seen inferior competitors stay at the top while you remain "Pending." pdqdigital.services was built to stop the bleeding.
             </p>
         </div>
     </section>
@@ -73,20 +73,19 @@
         <div class="max-w-4xl mx-auto px-4 text-center">
             <h2 class="text-3xl font-bold text-gray-900 mb-6">You Can't Afford a "Set It and Forget It" Strategy.</h2>
             <p class="text-xl text-gray-700 mb-8 font-light">
-                You've tried standard SEO agencies that promise the moon, but they leave your Google Business Profile completely exposed to malicious competitor edits and random AI suspensions. <strong class=>
+                You've tried standard SEO agencies that promise the moon, but they leave your Google Business Profile completely exposed to malicious competitor edits and random AI suspensions.
             </p>
 
             <div class="bg-blue-50 border-l-4 border-blue-600 p-8 rounded-r-xl shadow-sm text-left">
                 <h3 class="text-2xl font-bold text-blue-900 mb-4">The Solution: The PDQ Digital Shield</h3>
                 <p class="text-lg text-blue-800">
-                    We don't just optimize your listing; we lock it down. PDQ Digital Services actively monitors your profile 24/7, instantly reverting unauthorized changes and blocking AI suspensions before >
+                    We don't just optimize your listing; we lock it down. PDQ Digital Services actively monitors your profile 24/7, instantly reverting unauthorized changes and blocking AI suspensions before they hurt your bottom line.
                 </p>
-                </br>
+                <br/>
                 <p> <a href="#lead-form" class="bg-orange-500 text-white px-8 py-4 rounded-lg font-bold hover:bg-amber-600 transition shadow-lg text-center">Claim My Digital Shield</a></p>
             </div>
         </div>
     </section>
-
 
     <section id="stakes" class="py-20 bg-white">
         <div class="container mx-auto px-6 text-center">
@@ -132,15 +131,15 @@
                 <h2 class="text-3xl font-bold text-center text-gray-900 mb-2">Claim Your Digital Shield</h2>
                 <p class="text-center text-gray-600 mb-8">Enter your details below for a free, no-obligation visibility audit.</p>
 
-                <form action="/submit" method="POST" class="space-y-6">
+                <form id="gbp-shield-form" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Owner Name</label>
-                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition>
+                            <input type="text" name="name" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
                         </div>
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Business Name</label>
-                            <input type="text" name="business" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transi>
+                            <input type="text" name="business" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
                         </div>
                     </div>
                     <div>
@@ -148,7 +147,7 @@
                         <input type="email" name="email" required class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-orange-500 focus:border-orange-500 outline-none transition">
                     </div>
 
-                    <button type="submit" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl text-lg transition duration-300 shadow-lg transform hover:-translate-y-1">
+                    <button type="submit" id="submit-btn" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-xl text-lg transition duration-300 shadow-lg transform hover:-translate-y-1">
                         Deploy My Shield Now
                     </button>
                 </form>
@@ -156,12 +155,11 @@
         </div>
     </section>
 
-
-    <section id="privacy">
-        <h2>Privacy Policy</h2>
-        <div class="highlight">
-            <p><strong>Data Stewardship Commitment:</strong> PDQ Digital Services ("the Firm") respects the high-stakes nature of your professional data. Our use of information received from Google APIs adher>
-            <ul>
+    <section id="privacy" class="py-12 bg-white container mx-auto px-6 max-w-4xl">
+        <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
+        <div class="text-gray-700 space-y-4">
+            <p><strong>Data Stewardship Commitment:</strong> PDQ Digital Services ("the Firm") respects the high-stakes nature of your professional data. Our use of information received from Google APIs adheres to strict usage policies.</p>
+            <ul class="list-disc pl-6 space-y-2">
                 <li><strong>Data Collection:</strong> We collect only the data necessary to monitor and manage your Google Business Profile, including reviews and engagement metrics.</li>
                 <li><strong>Data Usage:</strong> Your data is used exclusively to improve your "Review Velocity" and profile visibility.</li>
                 <li><strong>Human Access:</strong> Per our Architectural-Grade standard, our lead curators (Philip and P.J.) only access your data to verify AI-drafted responses before publication.</li>
@@ -170,18 +168,17 @@
         </div>
     </section>
 
-    <section id="terms">
-        <h2>Terms of Service</h2>
-        <div class="highlight">
+    <section id="terms" class="py-12 bg-gray-50 container mx-auto px-6 max-w-4xl mb-12 rounded-2xl">
+        <h2 class="text-2xl font-bold mb-4">Terms of Service</h2>
+        <div class="text-gray-700 space-y-4">
             <p><strong>Engagement Protocols:</strong> By utilizing our services, you authorize PDQ Digital Services to manage your Google Business Profile on your behalf.</p>
-            <ul>
-                <li><strong>Third-Party Transparency:</strong> Google Business Profile is a service provided by Google at no extra cost. Our fees cover our specialized human curation and technical monitoring >
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>Third-Party Transparency:</strong> Google Business Profile is a service provided by Google at no extra cost. Our fees cover our specialized human curation and technical monitoring.</li>
                 <li><strong>Ownership Rights:</strong> You retain full ownership of your Business Profile at all times. You may terminate our management access at any time.</li>
                 <li><strong>Verification Standards:</strong> You must receive and provide authorization for all review responses drafted by our systems before they are published to your profile.</li>
             </ul>
         </div>
     </section>
-
 
     <footer class="bg-gray-900 text-gray-400 py-12 text-center">
         <div class="max-w-6xl mx-auto px-4">
@@ -193,125 +190,95 @@
         </div>
     </footer>
 
-
     <script>
+        // 1. Geo-IP Location Logic
         const areaDirectory = {
-             "Vero Beach": { rep: "Philip D", phone: "(772) 202-2613" },
-             "St. Louis": { rep: "Philip J", phone: "(314) 380-0156" }
-         };
+            "Vero Beach": { rep: "Philip D", phone: "(772) 202-2613" },
+            "St. Louis": { rep: "Philip J", phone: "(314) 380-0156" }
+        };
 
-         const defaultRep = "Philip D";
-         const defaultPhone = "(772) 202-2613";
+        const defaultRep = "Philip D";
+        const defaultPhone = "(772) 202-2613";
 
-         function updatePageContent(city, repName, phoneNum) {
-             document.getElementById('local-city').innerText = city;
-             document.querySelectorAll('.inline-city').forEach(span => span.innerText = city);
-             document.querySelectorAll('.inline-rep').forEach(span => span.innerText = repName);
-             document.querySelectorAll('.inline-phone').forEach(span => span.innerText = phoneNum);
+        function updatePageContent(city, repName, phoneNum) {
+            const cityElement = document.getElementById('local-city');
+            if(cityElement) cityElement.innerText = city;
+            
+            document.querySelectorAll('.inline-city').forEach(span => span.innerText = city);
+            document.querySelectorAll('.inline-rep').forEach(span => span.innerText = repName);
+            document.querySelectorAll('.inline-phone').forEach(span => span.innerText = phoneNum);
 
-             let cleanPhone = phoneNum.replace(/[^0-9]/g, '');
-             let phoneLink = document.getElementById('nav-phone-link');
-             if(phoneLink) phoneLink.href = `tel:${cleanPhone}`;
-         }
-
-         document.addEventListener("DOMContentLoaded", () => {
-             fetch('https://ipapi.co/json/')
-                 .then(response => response.json())
-                 .then(data => {
-                     let visitorCity = data.city;
-                     if (areaDirectory[visitorCity]) {
-                         updatePageContent(visitorCity, areaDirectory[visitorCity].rep, areaDirectory[visitorCity].phone);
-                     } else {
-                         updatePageContent("Local", defaultRep, defaultPhone);
-                     }
-                 })
-                 .catch(() => updatePageContent("Local", defaultRep, defaultPhone));
-         });
-
-         // Your lead capture logic stays here
-         document.getElementById('submit-btn').addEventListener('click', async function(e) {
-            e.preventDefault();
-            // ... (your existing fetch logic)
-         });
-      // Add this to your main.js or within a <script> tag on index.html
-
-document.getElementById('signupForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Stop the standard HTML form submission
-
-    // 1. Gather the data from the form
-    const formData = {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        service: document.getElementById('serviceType').value // e.g., 'gbp' or 'ad'
-    };
-
-    // 2. Define your VPS API endpoint
-    // Replace with the actual subdomain or IP routed to your VPS
-    const vpsEndpoint = 'https://api.pdqdigital.services/v1/signup'; 
-
-    try {
-        // 3. Send the POST request
-        const response = await fetch(vpsEndpoint, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData)
-        });
-
-        // 4. Handle the response
-        if (response.ok) {
-            const result = await response.json();
-            console.log('Success:', result);
-            alert('Thanks for signing up! We will be in touch.');
-            // Optional: reset the form
-            document.getElementById('signupForm').reset();
-        } else {
-            console.error('Server Error:', response.status);
-            alert('Something went wrong on our end. Please try again.');
+            let cleanPhone = phoneNum.replace(/[^0-9]/g, '');
+            let phoneLink = document.getElementById('nav-phone-link');
+            if(phoneLink) phoneLink.href = `tel:${cleanPhone}`;
         }
 
-    } catch (error) {
-        // 5. Handle network errors (e.g., VPS is down or CORS failed)
-        console.error('Network Error:', error);
-        alert('Could not connect to the server.');
-    }
-});
-// Example function to send data to your GBP Service
-async function sendDataToGBPService(formData) {
-    // 1. Point to your secure backend container route
-    const apiUrl = 'https://gbp-service.pdqdigital.services/your-api-endpoint'; 
-
-    try {
-        // 2. Make the connection
-        const response = await fetch(apiUrl, {
-            method: 'POST', // Use 'GET' if you are only requesting data, not sending
-            headers: {
-                'Content-Type': 'application/json',
-                'Accept': 'application/json'
-            },
-            body: JSON.stringify(formData) // Convert your JavaScript object to a JSON string
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    let visitorCity = data.city;
+                    if (areaDirectory[visitorCity]) {
+                        updatePageContent(visitorCity, areaDirectory[visitorCity].rep, areaDirectory[visitorCity].phone);
+                    } else {
+                        updatePageContent("Local", defaultRep, defaultPhone);
+                    }
+                })
+                .catch(() => updatePageContent("Local", defaultRep, defaultPhone));
         });
 
-        // 3. Check if the server rejected the request (e.g., 404 or 500 errors)
-        if (!response.ok) {
-            throw new Error(`Server Error: ${response.status}`);
-        }
+        // 2. Form Submission API Connection
+        document.getElementById('gbp-shield-form').addEventListener('submit', async function(e) {
+            e.preventDefault(); // Stops the page from reloading
 
-        // 4. Parse the successful JSON response from your Python backend
-        const data = await response.json();
-        console.log('Success! Backend says:', data);
-        
-        // TODO: Update your UI here (e.g., show a green success message, clear the form)
-        return data;
+            // Change button text so the user knows it's working
+            const submitBtn = document.getElementById('submit-btn');
+            const originalText = submitBtn.innerText;
+            submitBtn.innerText = "Deploying...";
+            submitBtn.disabled = true;
 
-    } catch (error) {
-        console.error('Connection failed:', error);
-        // TODO: Update your UI to show a red error message to the user
-    }
-}
-        
+            // Gather the form data exactly as it was typed
+            const formData = new FormData(this);
+            const payload = {
+                name: formData.get('name'),
+                business: formData.get('business'),
+                email: formData.get('email')
+            };
+
+            // Point to your backend Python container
+            const apiUrl = 'https://gbp-service.pdqdigital.services/api/submit';
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    throw new Error(`Server Error: ${response.status}`);
+                }
+
+                const data = await response.json();
+                console.log('Success from VPS:', data);
+                
+                // Success UI Update
+                submitBtn.innerText = "Shield Deployed!";
+                submitBtn.classList.replace('bg-orange-500', 'bg-green-500');
+                this.reset(); // Clears the form fields
+
+            } catch (error) {
+                console.error('Connection failed:', error);
+                alert('There was a problem connecting to the server. Please try again.');
+                
+                // Reset button on failure
+                submitBtn.innerText = originalText;
+                submitBtn.disabled = false;
+            }
+        });
     </script>
 </body>
 </html>
