@@ -279,6 +279,20 @@
                 submitBtn.disabled = false;
             }
         });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+    const emailInput = document.querySelector('input[name="email"]');
+    const emailValue = emailInput.value;
+    
+    // Basic regex to check for the "@" and the "."
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+    if (!emailPattern.test(emailValue)) {
+        e.preventDefault(); // Stop the form from submitting
+        alert("Oops! It looks like that email address is missing a '.' or '@'. Please check it and try again.");
+        emailInput.focus();
+    }
+});
     </script>
 </body>
 </html>
