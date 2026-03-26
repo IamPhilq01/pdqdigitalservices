@@ -301,6 +301,30 @@
         emailInput.focus();
     }
 });
+       
+    document.getElementById('lead-form').addEventListener('submit', function(e) {
+        e.preventDefault(); // Stop the page from refreshing
+    
+        const formData = new FormData(this);
+        const form = this;
+        const successDiv = document.getElementById('success-msg');
+
+    // Send the data to Python without leaving the page
+        fetch('/request-shield', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+                form.classList.add('hidden'); // Hide the form
+                successDiv.classList.remove('hidden'); // Show the success message
+            } else {
+                alert("Something went wrong. Please check your email and try again.");
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    });
+
     </script>
 </body>
 </html>
