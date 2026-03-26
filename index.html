@@ -305,7 +305,8 @@
     document.getElementById('lead-form').addEventListener('submit', function(e) {
         e.preventDefault(); // Stop the page from refreshing
     
-        const formData = new FormData(this);
+        formElement = document.getElementById('gbp-shield-form'); // Use the specific ID
+        const formData = new FormData(formElement);
         const form = this;
         const successDiv = document.getElementById('success-msg');
 
