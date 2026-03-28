@@ -231,61 +231,59 @@
                 .catch(() => updatePageContent("Local", defaultRep, defaultPhone));
         });
 
-        // 2. FIX: Single consolidated form handler with built-in email validation
+        // 2. NEW: Zapier Webhook Integration
         document.getElementById('gbp-shield-form').addEventListener('submit', async function (e) {
             e.preventDefault();
 
-            // Client-side email validation
+            // Email validation
             const emailInput = this.querySelector('input[name="email"]');
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(emailInput.value)) {
-                alert("Oops! That email address doesn't look right. Please check it and try again.");
+                alert("Please enter a valid email address.");
                 emailInput.focus();
                 return;
             }
-
-            const submitBtn = document.getElementById('submit-btn');
-            const originalText = submitBtn.innerText;
+const submitBtn = document.getElementById('submit-btn');
             submitBtn.innerText = "Deploying...";
             submitBtn.disabled = true;
 
+            // 1. Package the form data natively
             const formData = new FormData(this);
-            const payload = {
-                name: formData.get('name'),
-                business: formData.get('business'),
-                email: formData.get('email')
-            };
+            
+            // 2. Append our custom tracking fields
+            formData.append('source', 'pdq-gbp-shield');
+            formData.append('timestamp', new Date().toISOString());
 
-            const apiUrl = 'https://gbp-service.pdqdigital.services/request-shield';
+            const zapierWebhookUrl = 'https://hooks.zapier.com/hooks/catch/27006765/un9th7j/';
 
             try {
-                const response = await fetch(apiUrl, {
+                // 3. Send it directly to Zapier without any custom headers or CORS hacks
+                const response = await fetch(zapierWebhookUrl, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify(payload)
+                    body: formData
                 });
 
-                if (!response.ok) {
-                    throw new Error(`Server Error: ${response.status}`);
+                if (response.ok) {
+                    // Success! Hide the form and show the green message.
+                    this.classList.add('hidden');
+                    document.getElementById('success-msg').classList.remove('hidden');
+                } else {
+                    throw new Error(`Zapier returned status: ${response.status}`);
                 }
 
-                const data = await response.json();
-                console.log('Success from VPS:', data);
-
-                // Show success, hide form
-                this.classList.add('hidden');
-                document.getElementById('success-msg').classList.remove('hidden');
-
             } catch (error) {
-                console.error('Connection failed:', error);
-                alert('There was a problem connecting to the server. Please try again.');
-                submitBtn.innerText = originalText;
+                console.error('Submission failed:', error);
+                
+                // If you open your browser's Developer Tools (Console), 
+                // the exact error reason will be printed there.
+                alert('Connection failed. Please check the console for details.');
+                
+                submitBtn.innerText = "Deploy My Shield Now";
                 submitBtn.disabled = false;
             }
+            
         });
     </script>
 </body>
 </html>
+
